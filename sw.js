@@ -1,4 +1,4 @@
-const CACHE='chudu-demo-8.1-eaa167f26e';
+const CACHE='chudu-demo-8.2-5db337da6b';
 const base=self.registration.scope;
 const shell=new URL('index.html',base).href;
 const essentials=['index.html','manifest.json','pwa.js','icon-192.png','icon-512.png','apple-touch-icon.png'].map(name=>new URL(name,base).href);
