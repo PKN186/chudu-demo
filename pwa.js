@@ -1,5 +1,5 @@
 (() => {
- const VERSION='8.2';let deferredPrompt=null;
+ const VERSION='8.3';let deferredPrompt=null;
  const widget=()=>document.getElementById('chudu-tilda-site')?.shadowRoot;
  function setState(text){widget()?.querySelectorAll('[data-install-status]').forEach(n=>n.textContent=text)}
  const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
@@ -17,6 +17,6 @@
   if(!dialog.open)dialog.showModal();
  };
  const secure=location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1';
- if('serviceWorker' in navigator&&secure){navigator.serviceWorker.register(new URL('sw.js',location.href),{scope:'./',updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(()=>{document.documentElement.dataset.chuduPwaReady=VERSION;setState(standalone()?'Открыто как приложение':'Версия 8.2 сохранена для повторного открытия')}).catch(()=>setState('Сайт работает онлайн; установка зависит от браузера'))}
+ if('serviceWorker' in navigator&&secure){navigator.serviceWorker.register(new URL('sw.js',location.href),{scope:'./',updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(()=>{document.documentElement.dataset.chuduPwaReady=VERSION;setState(standalone()?'Открыто как приложение':'Версия 8.3 сохранена для повторного открытия')}).catch(()=>setState('Сайт работает онлайн; установка зависит от браузера'))}
  else setState('Для установки откройте опубликованную HTTPS-ссылку');
 })();
