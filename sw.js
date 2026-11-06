@@ -1,7 +1,7 @@
-const CACHE='chudu-demo-8.2-5db337da6b';
+const CACHE='chudu-demo-8.2-872b4162b2';
 const base=self.registration.scope;
 const shell=new URL('index.html',base).href;
-const essentials=['index.html','manifest.json','pwa.js','icon-192.png','icon-512.png','apple-touch-icon.png'].map(name=>new URL(name,base).href);
+const essentials=['index.html','manifest.json','pwa.js','pwa.js?v=8.2','icon-192.png','icon-512.png','apple-touch-icon.png'].map(name=>new URL(name,base).href);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(essentials.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('chudu-demo-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{
