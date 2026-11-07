@@ -4,7 +4,7 @@
   "short_name": "CHUDU_86",
   "description": "Демонстрация меню, самовывоза и заказа CHUDU_86",
   "lang": "ru",
-  "start_url": "./demo-v8.6.html?app=1",
+  "start_url": "./demo-v8.7.html?app=1",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F4E0",
