@@ -1,4 +1,4 @@
-const CACHE='chudu-demo-8.7-3073a42a99';
+const CACHE='chudu-demo-8.7-94ecb9fbda';
 const base=self.registration.scope;
 const shell=new URL('index.html',base).href;
 const legalFiles=['privacy.html','cookies.html','demo-terms.html'];
